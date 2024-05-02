@@ -1,0 +1,44 @@
+
+Parsing: sorting the input and checking for errors
+Problem solvable? 
+	Side error
+	Mirror error
+	?? Corner error
+Creating the matrix and filling it with '0'
+Filling in the matrix
+	Unsolvable?
+Printing the matrix
+ - Yay!
+
+while int_Zero < 0 (switching back and forth between scanning vertical and horisontal)
+
+For filling in the matrix we would need to first scan for the 1's and place a '4' adjecent to
+their positions.
+
+Next up we would like to fill in the rows, which have '4'
+
+if 3 of a number is present this function checks the coordinates of the 'n' to place the last one
+
+if '4' mirrors '1', 
+	if ([0] = 4) {4, 3, 2, 1}
+	else inverse
+
+if '2' mirrors '1', v[place = next to '2'] = 3
+
+if '2' mirrors '2', we will know the position of 4 in either [1] or [2]. 
+	if ([1] = 4) {1, 4, 2, 3} || {2, 4, 1, 3} || {3, 4, 1, 2}
+	if ([2] = 4) inverse
+	check if one or the other would make trouble. If two makes trouble insert the remaining one
+
+if '3' mirrors '1', we will know the position of 3 in either [1] or [2]. 
+	if ([0] = 4) {4, 2, 3, 1} || {4, 1, 3, 2} || {4, 3, 1, 2} 
+	if ([3] = 4) inverse
+
+if '2' mirrors a '3', v[place = [matrix_x[i]]-1] = 4 
+	if ([1] = 4) {2, 4, 3, 1} || {3, 4, 2, 1} || {1, 4, 3, 2}
+	if ([2] = 4) inverse
+
+funciton within the loop that will always check if there is only one 0 in a row or collum,
+and inserts the remaining number
+
+
