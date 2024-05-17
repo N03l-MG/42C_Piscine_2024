@@ -4,11 +4,13 @@
 
 void	write_if_unique(char a, char b, char c)
 {
-	if (!(a == b && b == c && c == a)) {
+	if (!(a == b && b == c && c == a))
+	{
 		write(1, &c, 1);
 		write(1, &b, 1);
 		write(1, &a, 1);
-		if (!(c == '7' && b == '8' && a == '9')) {
+		if (!(c == '7' && b == '8' && a == '9'))
+		{
 			write(1, ", ", 2);
 		}
 	}
@@ -16,9 +18,9 @@ void	write_if_unique(char a, char b, char c)
 
 void	ft_print_comb(void)
 {
-	char a;
-	char b;
-	char c;
+	char	a;
+	char	b;
+	char	c;
 
 	c = '0';
 	while (c <= '7')
